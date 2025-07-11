@@ -9,11 +9,12 @@
 :root {
     --input-width: 4rem;
     --input-height: 2rem;
-    --valid-input-border: 2px solid red;
-    --invalid-input-border: 2px solid blue;
+    --valid-input-border: 2px solid green;
+    --focus-input-border: 1px solid blue;
+    --invalid-input-border: 2px solid red;
     --label-font-size: 1.5rem;
-    --button-width: 3rem;
-    --button-height: 2.5rem;
+    --button-width: 10rem;
+    --button-height: 2.3rem;
     --button-bg-color: #596D48;
     --button-font-size: 2rem; 
     --logo-font: 'Skranji', sans-serif;
@@ -42,4 +43,63 @@
     overflow: hidden;
     width: 70%;
 }
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.8rem;
+}
+
+input, label {
+    display: block;
+}
+
+input {
+    margin-bottom: 0.5rem;
+}
+
+input:focus {
+    border: var(--focus-input-border);
+}
+
+input:valid {
+    border: var(--valid-input-border);
+}
+
+input:focus:invalid:not(:placeholder-shown) {
+    border: var(--invalid-input-border);
+}
+
+label {
+    font-size: 0.6rem;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+fieldset {
+    border: none;
+}
+
+button {
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--button-bg-color);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+
+
 
