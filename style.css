@@ -8,7 +8,8 @@
 
 :root {
     --input-width: 4rem;
-    --input-height: 2rem;
+    --input-height: 7rem;
+    --input-border-radius: 5px;
     --valid-input-border: 2px solid green;
     --focus-input-border: 1px solid blue;
     --invalid-input-border: 2px solid red;
@@ -18,6 +19,11 @@
     --button-bg-color: #596D48;
     --button-font-size: 2rem; 
     --logo-font: 'Skranji', sans-serif;
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .background-image {
@@ -53,7 +59,8 @@
 form {
     display: flex;
     flex-direction: column;
-    margin-left: 2.8rem;
+    gap: 1.5rem;
+    
 }
 
 input, label {
@@ -61,7 +68,9 @@ input, label {
 }
 
 input {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1.3px solid rgb(206, 206, 206);
+    border-radius: var(--input-border-radius);
 }
 
 input:focus {
@@ -84,6 +93,8 @@ label {
     display: flex;
     flex-direction: row;
     gap: 3rem;
+    box-shadow: 1px 2px 5px rgb(191, 191, 191);
+    padding-left: 2.5rem;
 }
 
 fieldset {
@@ -99,6 +110,7 @@ button {
     color: white;
     font-weight: 600;
     font-size: 0.7rem;
+    margin-left: 2.5rem;
 }
 
 
